@@ -3,6 +3,7 @@ package org.cocktail.gfc.commandes;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 
 public class CommandeService {
 
@@ -54,19 +55,35 @@ public class CommandeService {
      * sinon lance une exception IllegalArgumentException.
      */
     public Integer recupererExerciceOuvert() {
-        // TODO
-        return -1;
+        return exerciceRepository.findAll().stream()
+                .filter(Exercice::estOuvert)
+                .findFirst()
+                .map(Exercice::value)
+                .orElseThrow();
     }
 
     // ----------------------------
     // --------- LEVEL 2 ----------
     // ----------------------------
 
+    /**
+     * Retourne le montant total HT des Commandes pour les 3 derniers exercuces à partir de l'exercice de référence (inclus).
+     * Pour l'exercice de référence 2022, nous attendons :
+     * 2022 | 11.0
+     * 2021 | 48.30
+     * 2020 | 5
+     * @param exerciceReference exercice de référence sous forme d'un entier
+     * @return une Map dont la clé est l'exercice et la valeur le montant total HT des commandes associées à l'exercice.
+     */
+    public Map<Integer, BigDecimal> montantTotalHTSurTroisExercices(Integer exerciceReference) {
+        // TODO
+        Map<Integer, BigDecimal> rapport = Map.of();
+        return rapport;
+    }
 
     // ----------------------------
     // --------- LEVEL 3 ----------
     // ----------------------------
-
 
     class InMemoryExerciceRepository implements ExerciceRepository {
 
