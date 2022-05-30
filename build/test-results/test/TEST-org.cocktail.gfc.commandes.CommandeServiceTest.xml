@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.cocktail.gfc.commandes.CommandeServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-29T17:07:14" hostname="kahlua" time="67.471">
+  <properties/>
+  <testcase name="testPrint()" classname="org.cocktail.gfc.commandes.CommandeServiceTest" time="67.471"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

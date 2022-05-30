@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(platform("org.jdbi:jdbi3-bom:3.29.0"))
+    //implementation "org.jdbi:jdbi3-core"
+    implementation 'de.vandermeer:asciitable:0.3.2'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    //testRuntimeOnly 'com.h2database:h2:1.4.200'
+}
+
+test {
+    useJUnitPlatform()
+}
