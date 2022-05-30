@@ -48,6 +48,15 @@ public class CommandeService {
     // ----------------------------
     // --------- LEVEL 1 ----------
     // ----------------------------
+    /**
+     * Retourne l'exercice dont le statut est "ouvert".
+     * @return l'exercice sous forme d'entier (année) si  il en existe un au statut ouvert
+     * sinon lance une exception IllegalArgumentException.
+     */
+    public Integer recupererExerciceOuvert() {
+        // TODO
+        return -1;
+    }
 
     // ----------------------------
     // --------- LEVEL 2 ----------
